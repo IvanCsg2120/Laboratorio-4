@@ -24,36 +24,48 @@
 
 /* Tipografía base */
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--gris);
     background-color: var(--fondo);
 }
 
 h1 {
-    font-size: 3rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 3.2rem;
     font-weight: 900;
+    font-style: normal;
     color: var(--azul);
     margin-bottom: 1rem;
+    letter-spacing: -1px;
 }
 
 h2 {
-    font-size: 2rem;
+    font-family: 'Arial Black', 'Arial Bold', sans-serif;
+    font-size: 2.2rem;
     font-weight: 700;
+    font-style: normal;
     color: var(--celeste);
     margin: 2rem 0 1rem;
+    letter-spacing: -0.5px;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-family: 'Verdana', Geneva, sans-serif;
+    font-size: 1.6rem;
     font-weight: 600;
+    font-style: normal;
     color: var(--azul);
     margin-bottom: 0.75rem;
 }
 
 p {
-    font-size: 1rem;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.8;
     margin-bottom: 1em;
 }
 
@@ -115,8 +127,8 @@ nav a:active {
    INDEX - PÁGINA PRINCIPAL
    ============================================ */
 
-/* Hero Section - Ocupa todo el ancho */
-body > center:first-of-type {
+/* Hero Section - SOLO para index.html - Ocupa todo el ancho */
+body > center:first-of-type:has(h1:contains("Viajes Virtuales")) {
     background: linear-gradient(135deg, #1e40af 0%, var(--azul) 50%, var(--celeste) 100%);
     padding: 4rem 2rem;
     margin: 0;
@@ -126,14 +138,25 @@ body > center:first-of-type {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-body > center:first-of-type h1 {
+/* Estilos específicos para center en index.html */
+body > center:first-child {
+    background: linear-gradient(135deg, #1e40af 0%, var(--azul) 50%, var(--celeste) 100%);
+    padding: 4rem 2rem;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    color: var(--blanco);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+body > center:first-child h1 {
     color: var(--blanco);
     font-size: 3.5rem;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
     margin-bottom: 2rem;
 }
 
-body > center:first-of-type h2 {
+body > center:first-child h2 {
     color: var(--blanco);
     font-size: 1.3rem;
     font-weight: 400;
@@ -143,10 +166,23 @@ body > center:first-of-type h2 {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-body > center:first-of-type img {
+body > center:first-child img {
     margin-top: 2rem;
     border: 5px solid var(--blanco);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Center en otras páginas - fondo normal */
+center {
+    background-color: transparent;
+    color: var(--gris);
+}
+
+center h1,
+center h2,
+center h3,
+center p {
+    color: var(--gris);
 }
 
 /* Lista de destinos - Estilo tarjetas */
