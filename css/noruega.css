@@ -1,0 +1,257 @@
+/* noruega.css */
+
+/* 1. Importación de Fuente (Outfit) */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
+
+/* 2. Paleta de Colores (REQUISITO 3: Paleta de colores) */
+:root {
+    --azul: #2563eb;
+    --celeste: #0ea5e9;
+    --naranja: #f59e0b;
+    --verde: #10b981;
+    --rojo: #ef4444;
+    --morado: #8b5cf6;
+    --gris: #1f2937;
+    --blanco: #ffffff;
+    --fondo: #f9fafb;
+
+    /* Mapeo de la paleta */
+    --color-primary: var(--azul);
+    --color-secondary: var(--celeste);
+    --color-highlight: var(--naranja);
+    --color-text-dark: var(--gris);
+    --color-text-light: var(--blanco);
+    --color-background-light: var(--blanco);
+    --color-background-accent: var(--fondo);
+
+    /* REQUISITO 6: Modelo de caja (Sombra) */
+    --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    --border-radius: 8px;
+}
+
+/* 3. Estilos Globales y Base */
+body {
+    /* REQUISITO 2: Tipografía y unidades (font-family, font-size, line-height) */
+    font-family: 'Outfit', sans-serif;
+    color: var(--color-text-dark);
+    /* REQUISITO 6: Modelo de caja (margin, padding) */
+    margin: 0;
+    padding: 0;
+    /* REQUISITO 3: Fondo */
+    background-color: var(--color-background-accent);
+    line-height: 1.6;
+}
+
+main {
+    /* REQUISITO 2 y 6: Unidades y Modelo de caja (%, px, margin) */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* REQUISITO 5: Uso de CLASS (texto justificado) */
+.seccion-texto p {
+    text-align: justify;
+}
+
+/* Encabezados */
+h1, h2, h3, h4 {
+    color: var(--color-primary);
+    /* REQUISITO 2: font-weight */
+    font-weight: 700;
+    /* REQUISITO 6: Modelo de caja (margin) */
+    margin-top: 0.5em; /* REQUISITO 2: Unidad em */
+    margin-bottom: 0.5em;
+}
+
+/* REQUISITO 7: Posicionamiento (position: relative) */
+h2 {
+    font-size: 1.8em;
+    border-left: 5px solid var(--color-highlight);
+    padding-left: 10px;
+    margin-bottom: 20px;
+    position: relative; /* Demostración de posicionamiento */
+}
+
+/* Líneas Separadoras */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--color-secondary);
+    margin: 30px 0;
+    opacity: 0.5;
+}
+
+/* Negritas (Para resaltar conceptos) */
+strong {
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+/* 4. Estilos de Header y Footer */
+
+/* REQUISITO 5: Uso de ID (encabezado-principal) */
+#encabezado-principal {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    box-shadow: var(--shadow-light);
+}
+
+#encabezado-principal h1 {
+    color: var(--color-text-light);
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--color-primary);
+    margin-top: 30px;
+}
+
+footer hr {
+    display: none;
+}
+
+/* REQUISITO 4: Menú de navegación estilizado (pseudo-clase :hover) */
+footer a {
+    display: inline-block;
+    /* REQUISITO 6: Modelo de caja (padding) */
+    padding: 12px 25px; 
+    border-radius: 50px; 
+    
+    background-color: var(--color-highlight);
+    color: var(--color-primary);
+    
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer a:hover {
+    /* Pseudo-clase :hover */
+    background-color: var(--verde);
+    color: var(--blanco);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+
+/* 5. Estilos de la Imagen Principal */
+section center img {
+    display: block;
+    /* REQUISITO 9: Diseño adaptable (max-width: 100%) */
+    max-width: 100%; 
+    height: auto; 
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    object-fit: cover;
+}
+
+
+/* 6. Estilos de Tablas (Sitios Imprescindibles) - Creado como TARJETAS */
+div table {
+    border: none !important;
+    border-collapse: separate;
+    border-spacing: 15px 15px;
+}
+
+div table td {
+    background-color: var(--color-background-light);
+    /* REQUISITO 6: Modelo de caja (padding, border) */
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    border: 1px solid var(--celeste);
+    
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    vertical-align: top;
+}
+
+div table td:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+div table td h4 {
+    color: var(--color-primary);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* 7. Estilos de Tablas de Precios Estimados */
+div:last-child table {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+div:last-child table,
+div:last-child th,
+div:last-child td {
+    border: 1px solid var(--color-secondary);
+    padding: 12px;
+}
+
+div:last-child thead tr {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+div:last-child tbody tr:nth-child(even) {
+    background-color: var(--color-fondo);
+}
+
+div:last-child tbody tr:last-child {
+    background-color: var(--color-highlight);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+
+/* 8. Estilos del Video Embed */
+section iframe {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+    border: 5px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+/* 9. Media Queries para Responsividad Móvil */
+@media (max-width: 768px) {
+    
+    h1 {
+        font-size: 2em;
+    }
+
+    /* REQUISITO 9: Media Queries para el diseño adaptable */
+    /* Las celdas de la tabla de sitios imprescindibles se apilan en pantallas pequeñas */
+    div table,
+    div table tr,
+    div table td {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+    
+    div table {
+        border-spacing: 0; 
+    }
+    
+    div table td {
+        margin-bottom: 15px;
+    }
+
+    div:last-child table {
+        width: 100%;
+    }
+}
