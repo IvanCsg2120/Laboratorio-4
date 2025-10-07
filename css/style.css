@@ -1,0 +1,643 @@
+/* ============================================
+   VIAJES VIRTUALES - CSS MEJORADO
+   ============================================ */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Paleta de colores */
+:root {
+    --azul: #2563eb;
+    --celeste: #0ea5e9;
+    --naranja: #f59e0b;
+    --verde: #10b981;
+    --rojo: #ef4444;
+    --morado: #8b5cf6;
+    --gris: #1f2937;
+    --blanco: #ffffff;
+    --fondo: #f9fafb;
+}
+
+/* Tipografía base */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--gris);
+    background-color: var(--fondo);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--azul);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--celeste);
+    margin: 2rem 0 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--azul);
+    margin-bottom: 0.75rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--azul), var(--celeste));
+    color: var(--blanco);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    color: var(--blanco);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    opacity: 0.95;
+}
+
+/* Navegación - Menú horizontal */
+nav {
+    background-color: var(--azul);
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ol,
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--celeste);
+    border-bottom: 3px solid var(--naranja);
+}
+
+nav a:active {
+    background-color: #1e40af;
+}
+
+/* ============================================
+   INDEX - PÁGINA PRINCIPAL
+   ============================================ */
+
+/* Hero Section - Ocupa todo el ancho */
+body > center:first-of-type {
+    background: linear-gradient(135deg, #1e40af 0%, var(--azul) 50%, var(--celeste) 100%);
+    padding: 4rem 2rem;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    color: var(--blanco);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+body > center:first-of-type h1 {
+    color: var(--blanco);
+    font-size: 3.5rem;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 2rem;
+}
+
+body > center:first-of-type h2 {
+    color: var(--blanco);
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+body > center:first-of-type img {
+    margin-top: 2rem;
+    border: 5px solid var(--blanco);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Lista de destinos - Estilo tarjetas */
+body > ol {
+    background: transparent;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+body > ol li {
+    background: linear-gradient(135deg, var(--blanco), #f0f9ff);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid var(--azul);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+body > ol li:nth-child(1) {
+    border-left-color: var(--celeste);
+}
+
+body > ol li:nth-child(2) {
+    border-left-color: var(--rojo);
+}
+
+body > ol li:nth-child(3) {
+    border-left-color: var(--verde);
+}
+
+body > ol li:nth-child(4) {
+    border-left-color: var(--morado);
+}
+
+body > ol li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+body > ol li a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--azul);
+    text-decoration: none;
+    display: block;
+}
+
+body > ol li a:hover {
+    color: var(--celeste);
+}
+
+body > ol li a::before {
+    content: "✈️ ";
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* BOTÓN "CONOCE NUESTRO EQUIPO" */
+body > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--azul);
+    margin: 4rem auto 2rem;
+}
+
+body > h2 + a,
+body > a[href*="Nostros"] {
+    display: block;
+    background: linear-gradient(135deg, var(--naranja), #f97316);
+    color: var(--blanco) !important;
+    padding: 1.8rem 4rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+    margin: 2rem auto 4rem;
+    text-align: center;
+    max-width: 400px;
+    border: 4px solid var(--naranja);
+    transition: all 0.3s ease;
+}
+
+body > h2 + a:hover,
+body > a[href*="Nostros"]:hover {
+    background: linear-gradient(135deg, #ea580c, #dc2626);
+    box-shadow: 0 12px 35px rgba(234, 88, 12, 0.5);
+    transform: scale(1.08);
+}
+
+/* ============================================
+   PÁGINAS DE DESTINOS - DISEÑO MEJORADO
+   ============================================ */
+
+/* Contenedor de páginas internas */
+center {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    background-color: var(--blanco);
+    margin: 2rem auto;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--azul);
+}
+
+/* Títulos de destinos con iconos */
+body h1 strong {
+    background: linear-gradient(135deg, var(--azul), var(--celeste));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Cajas de información destacada */
+section h3 {
+    background: linear-gradient(to right, var(--celeste), transparent);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    color: var(--blanco);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-top: 2rem;
+}
+
+/* Párrafos en destinos */
+section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 1rem;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    border-left: 4px solid var(--celeste);
+}
+
+/* Imágenes de destinos */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border: 4px solid var(--blanco);
+}
+
+img:hover {
+    box-shadow: 0 12px 35px rgba(37, 99, 235, 0.4);
+    transform: scale(1.02);
+}
+
+/* Listas en páginas de destinos */
+section ul,
+section ol {
+    background-color: #eff6ff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    border-left: 5px solid var(--verde);
+}
+
+section li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+}
+
+section li strong {
+    color: var(--azul);
+}
+
+/* Tablas mejoradas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: var(--blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+thead {
+    background: linear-gradient(135deg, var(--azul), var(--celeste));
+    color: var(--blanco);
+}
+
+th {
+    padding: 1.2rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+td {
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+    background-color: #eff6ff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Videos mejorados */
+iframe {
+    max-width: 100%;
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 15px;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border: 5px solid var(--blanco);
+}
+
+section h3 + iframe {
+    margin-top: 1rem;
+}
+
+/* Figuras con descripciones */
+figure {
+    margin: 2.5rem 0;
+    text-align: center;
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+figcaption {
+    font-size: 1rem;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* Botones de volver */
+button,
+div button,
+p button {
+    background: linear-gradient(135deg, var(--naranja), #f97316);
+    color: var(--blanco);
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ea580c, #dc2626);
+    box-shadow: 0 10px 30px rgba(234, 88, 12, 0.4);
+    transform: translateY(-3px);
+}
+
+button a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+/* ============================================
+   PÁGINA NOSOTROS - MEJORADA
+   ============================================ */
+
+/* Título principal Nosotros */
+body > h1 {
+    text-align: center;
+    background: linear-gradient(135deg, var(--azul), var(--celeste));
+    color: var(--blanco);
+    padding: 3rem 2rem;
+    margin: 0 0 3rem 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Subtítulo equipo */
+body > h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--celeste);
+    margin: 2rem 0;
+    padding: 1rem;
+    border-bottom: 4px solid var(--naranja);
+    display: inline-block;
+    width: 100%;
+}
+
+/* Lista de integrantes mejorada */
+body > ul {
+    background: linear-gradient(135deg, #eff6ff, var(--blanco));
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    border: 3px solid var(--celeste);
+}
+
+body > ul li {
+    font-size: 1.4rem;
+    padding: 1.5rem 2rem;
+    margin: 1rem 0;
+    background: linear-gradient(135deg, var(--blanco), #f0f9ff);
+    border-left: 6px solid var(--azul);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+body > ul li:nth-child(1) {
+    border-left-color: var(--celeste);
+}
+
+body > ul li:nth-child(2) {
+    border-left-color: var(--verde);
+}
+
+body > ul li:nth-child(3) {
+    border-left-color: var(--naranja);
+}
+
+body > ul li:nth-child(4) {
+    border-left-color: var(--morado);
+}
+
+body > ul li:nth-child(5) {
+    border-left-color: var(--rojo);
+}
+
+body > ul li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Botón volver en Nosotros */
+body > a[href="index.html"] {
+    display: block;
+    background: linear-gradient(135deg, var(--azul), var(--celeste));
+    color: var(--blanco) !important;
+    padding: 1.5rem 3rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+    margin: 3rem auto;
+    text-align: center;
+    max-width: 300px;
+    transition: all 0.3s ease;
+}
+
+body > a[href="index.html"]:hover {
+    background: linear-gradient(135deg, #1e40af, var(--azul));
+    box-shadow: 0 12px 35px rgba(30, 64, 175, 0.4);
+    transform: scale(1.05);
+}
+
+/* Enlaces generales */
+a {
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--celeste);
+    text-decoration: underline;
+}
+
+/* Footer mejorado */
+footer {
+    background: linear-gradient(135deg, var(--azul), #1e40af);
+    color: var(--blanco);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+}
+
+footer p {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+}
+
+footer a {
+    color: var(--naranja);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+footer a:hover {
+    color: var(--blanco);
+}
+
+/* Línea horizontal */
+hr {
+    border: none;
+    border-top: 3px solid var(--celeste);
+    margin: 3rem 0;
+    opacity: 0.5;
+}
+
+/* ============================================
+   RESPONSIVE - MEDIA QUERIES
+   ============================================ */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.75rem; }
+    iframe { height: 400px; }
+    
+    body > ol {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Móviles */
+@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    
+    body > center:first-of-type h1 {
+        font-size: 2.5rem;
+    }
+    
+    nav ol, nav ul {
+        flex-direction: column;
+    }
+    
+    nav a {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    body > ol {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    iframe {
+        height: 250px;
+    }
+    
+    button,
+    body > h2 + a {
+        width: 90%;
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Móviles pequeños */
+@media screen and (max-width: 480px) {
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.35rem; }
+    
+    body > center:first-of-type {
+        padding: 2rem 1rem;
+    }
+    
+    section { padding: 1rem; }
+    th, td { padding: 0.5rem; }
+}
